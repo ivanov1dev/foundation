@@ -1,0 +1,11 @@
+{
+  "require": {
+    "kwn/php-rdkafka-stubs": "^1.2"
+  },
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Foundation\\": "sites/all/modules/custom/"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+name = Foundation
+core = 7.x
+package = Foundation
+version = 7.x-1.0
+project = foundation
+
+files[] = class/FoundationArray.php
+files[] = class/FoundationAvroRegistry.php
+files[] = class/FoundationCamunda.php
+files[] = class/FoundationDate.php
+files[] = class/FoundationKafka.php
+files[] = class/FoundationString.php
+files[] = class/FoundationNode.php
+files[] = class/FoundationField.php
+
+files[] = class/Builder/BuilderFactory.php
+files[] = class/Builder/BuilderInterface.php
+
+files[] = class/Command/CommandFactory.php
+files[] = class/Command/CommandInterface.php
+files[] = class/Command/CommandPrototype.php
+files[] = class/Command/Command/CommandKafkaConsumer.php
+
+files[] = class/Consumer/ConsumerFactory.php
+files[] = class/Consumer/ConsumerInterface.php
+files[] = class/Consumer/ConsumerPrototype.php
+
+files[] = class/Producer/ProducerFactory.php
+files[] = class/Producer/ProducerInterface.php
+files[] = class/Producer/Producer/ProducerDefault.php
+files[] = class/Producer/Producer/ProducerAvro.php
+
+files[] = class/Serializer/Serializer/SerializerAvro.php
+files[] = class/Serializer/Serializer/SerializerJson.php
+files[] = class/Serializer/SerializerFactory.php
+files[] = class/Serializer/SerializerInterface.php
+
+files[] = class/Storage/StorageFactory.php
+files[] = class/Storage/StorageInterface.php
+files[] = class/Storage/Storage/StorageFileSystem.php
+
+files[] = class/Smev/SmevRequestFactory.php
+files[] = class/Smev/SmevRequestInterface.php
+files[] = class/Smev/SmevRequestPrototype.php
+files[] = class/Smev/Request/SmevRequestEgrip.php
+files[] = class/Smev/Request/SmevRequestEgrul.php
+files[] = class/Smev/Request/SmevRequestFnsFl.php
+
+files[] = examples/Command/CommandFoundationExample.php
+files[] = examples/Command/CommandFoundationConsumerExample.php
+files[] = examples/ConsumerFoundationExample.php

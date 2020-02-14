@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Исходный код модуля "foundation".
+ */
+
+/**
+ * Implements hook_init().
+ */
+function foundation_init() {
+  drupal_add_css(drupal_get_path('module', 'foundation') . '/css/foundation.css');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function foundation_menu() {
+  $items = array();
+
+  $items['admin/config/development/kafka'] = array(
+    'title' => 'Kafka',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('foundation_kafka_settings_form'),
+    'access arguments' => array('administer kafka settings'),
+    'file' => 'inc/kafka.inc',
+  );
+  $items['admin/config/development/camunda'] = array(
+    'title' => 'Camunda',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('foundation_camunda_settings_form'),
+    'access arguments' => array('administer camunda settings'),
+    'file' => 'inc/camunda.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function foundation_permission() {
+  return array(
+    'administer kafka settings' => array(
+      'title' => 'Доступ к управлению настройками Kafka',
+    ),
+    'administer camunda settings' => array(
+      'title' => 'Доступ к управлению настройками Camunda',
+    ),
+  );
+}
